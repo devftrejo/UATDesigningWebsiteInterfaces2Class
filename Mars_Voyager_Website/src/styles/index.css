@@ -1,0 +1,82 @@
+body {
+    display: flex; /* Make the body a flex container */
+    flex-direction: column; /* Align children vertically */
+    min-height: 100vh; /* Full height of the viewport */
+    margin: 0; /* Remove default margin */
+    font-family: Arial, sans-serif; /* Use Arial font */
+    line-height: 1.6; /* Increase line height for better readability */
+    background-image: url("/src/assets/MarsVoyager.jpg"); /* Set background image */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the background image */
+}
+
+.transparent-overlay {
+    background: rgba(0, 0, 0, 0.5); /* Black background with 50% transparency */
+}
+
+header {
+    color: white; /* Set text color to white */
+    padding: 10px 20px; /* Add some padding */
+    text-align: center; /* Center text */
+}
+
+main {
+    flex: 1; /* Take up remaining space */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center children horizontally */
+    justify-content: center; /* Center children vertically */
+    text-align: center;
+}
+
+p {
+    color: white;
+    margin-bottom: 20px; /* Add some space between the paragraph and the button */
+}
+
+label {
+    color: white;
+}
+
+.button {
+    background: #ff6f61; /* Set background color */
+    color: white;
+    border: none; /* Remove border */
+    padding: 10px 15px;
+    cursor: pointer; /* Change cursor to pointer on hover */
+    border-radius: 50px; /* Make the button rounded */
+    font-size: 16px; /* Increase font size */
+    transition: background 0.3s ease; /* Smooth transition for the hover effect */
+    text-decoration: none; /* Remove underline */
+}
+
+.button:hover {
+    background: #ff3b2d; /* Change background color on hover */
+}
+
+form #pilotForm {
+    display: flex;
+    flex-direction: column;
+}
+
+form #pilotForm label,
+form #pilotForm input,
+form #pilotForm textarea {
+    margin-bottom: 10px;
+}
+
+ul {
+    color: white;
+    list-style-type: none; /* Remove default list style */  
+}
+
+footer {
+    text-align: center;
+    padding: 5px 20px;
+}
+
+#footer-text {
+    color: white;
+}
