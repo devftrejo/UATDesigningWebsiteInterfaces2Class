@@ -56,14 +56,14 @@ label {
     background: #ff3b2d; /* Change background color on hover */
 }
 
-form #pilotForm {
+form#pilotForm {
     display: flex;
     flex-direction: column;
 }
 
-form #pilotForm label,
-form #pilotForm input,
-form #pilotForm textarea {
+form#pilotForm label,
+form#pilotForm input,
+form#pilotForm textarea {
     margin-bottom: 10px;
 }
 

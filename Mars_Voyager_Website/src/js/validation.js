@@ -12,9 +12,9 @@ document.getElementById('pilotForm').addEventListener('submit', function (e) {
     // Validate the form fields:
 
     if (name.length < 3) { // Check if the name is at least 3 characters long
-        alert('Full Name must be at least 3 characters long.');
-        e.preventDefault();
-        return;
+        alert('Full Name must be at least 3 characters long.'); // Show an alert message
+        e.preventDefault(); // Prevent the form from being submitted
+        return; // Exit the function
     }
     if (isNaN(age) || age < 18 || age > 65) { // Check if the age is a number between 18 and 65
         alert('Age must be between 18 and 65.');
