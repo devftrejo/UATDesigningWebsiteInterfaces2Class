@@ -1,8 +1,13 @@
+/**
+* General:
+*/
+
 body {
     display: flex; /* Make the body a flex container */
     flex-direction: column; /* Align children vertically */
     min-height: 100vh; /* Full height of the viewport */
     margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
     font-family: Arial, sans-serif; /* Use Arial font */
     line-height: 1.6; /* Increase line height for better readability */
     background-image: url("/src/assets/MarsVoyager.jpg"); /* Set background image */
@@ -15,11 +20,46 @@ body {
     background: rgba(0, 0, 0, 0.5); /* Black background with 50% transparency */
 }
 
-header {
-    color: white; /* Set text color to white */
-    padding: 10px 20px; /* Add some padding */
-    text-align: center; /* Center text */
+ul {
+    color: white; /* Set text color */
+    list-style-type: none; /* Remove default list style */  
 }
+
+/**
+* Navbar:
+*/
+
+.nav-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Hide overflow */
+    background-color: #222; /* Set background color */
+}
+
+.nav-bar li {
+    float: left; /* Float list items to the left */
+}
+
+.nav-bar li a {
+    display: block; /* Display block */
+    color: white;
+    text-align: center; /* Center text */
+    padding: 14px 16px;
+    text-decoration: none; /* Remove underline */
+}
+
+.nav-bar li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #ff6f61;
+}
+
+/**
+* Main Content:
+*/
 
 main {
     flex: 1; /* Take up remaining space */
@@ -31,17 +71,21 @@ main {
     text-align: center;
 }
 
-p {
+h1, p {
     color: white;
-    margin-bottom: 20px; /* Add some space between the paragraph and the button */
+    margin: 0 0; /* Remove default margin */
 }
 
-label {
-    color: white;
+.home-content-p {
+    margin: 0 0 20px 0; /* Remove default margin and add bottom margin */
 }
+
+/**
+* Button:
+*/
 
 .button {
-    background: #ff6f61; /* Set background color */
+    background: #ff6f61;
     color: white;
     border: none; /* Remove border */
     padding: 10px 15px;
@@ -49,11 +93,19 @@ label {
     border-radius: 50px; /* Make the button rounded */
     font-size: 16px; /* Increase font size */
     transition: background 0.3s ease; /* Smooth transition for the hover effect */
-    text-decoration: none; /* Remove underline */
+    text-decoration: none;
 }
 
 .button:hover {
     background: #ff3b2d; /* Change background color on hover */
+}
+
+/**
+* Form:
+*/
+
+label {
+    color: white;
 }
 
 form#pilotForm {
@@ -67,16 +119,10 @@ form#pilotForm textarea {
     margin-bottom: 10px;
 }
 
-ul {
-    color: white;
-    list-style-type: none; /* Remove default list style */  
-}
+/**
+* Footer:
+*/
 
 footer {
     text-align: center;
-    padding: 5px 20px;
-}
-
-#footer-text {
-    color: white;
 }

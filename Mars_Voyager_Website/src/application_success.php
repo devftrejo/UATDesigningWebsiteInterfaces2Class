@@ -7,10 +7,14 @@
     <link rel="stylesheet" href="./styles/index.css">
 </head>
 <body>
-    <header class="transparent-overlay">
-        <h1>Thank You!</h1>
-    </header>
+    <nav class="nav-bar">
+        <ul>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="next_voyage.php">Next Voyage</a></li>
+        </ul>
+    </nav>
     <main class="transparent-overlay">
+        <h1>Thank You!</h1>
         <p>We have received your application. Here are the details you provided:</p>
         <ul>
             <!-- To display the submitted form data you simply echo all variables. Then use the htmlspecialchars function to replace any HTML special characters so that black hat attackers cannot inject HTML or JS code in the form (XSS Attack). -->

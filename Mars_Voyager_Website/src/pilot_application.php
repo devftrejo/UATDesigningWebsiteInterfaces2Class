@@ -8,10 +8,14 @@
     <script src="./js/validation.js" defer></script>
 </head>
 <body>
-    <header class="transparent-overlay">
-        <h1>Pilot Application Form</h1>
-    </header>
+    <nav class="nav-bar">
+        <ul>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="next_voyage.php">Next Voyage</a></li>
+        </ul>
+    </nav>
     <main class="transparent-overlay">
+        <h1>Pilot Application Form</h1>
         <!-- When user fills out and submits form, the data is sent via POST method for processing to a PHP file named "application_success". -->
         <form action="./application_success.php" method="POST" id="pilotForm">
             <label for="name">Full Name:</label>

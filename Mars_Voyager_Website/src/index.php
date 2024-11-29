@@ -7,11 +7,15 @@
     <link rel="stylesheet" href="./styles/index.css">
 </head>
 <body>
-    <header class="transparent-overlay">
-        <h1>Welcome to Mars Voyager Tours</h1>
-    </header>
+    <nav class="nav-bar">
+        <ul>
+            <li><a class="active" href="index.php">Home</a></li>
+            <li><a href="next_voyage.php">Next Voyage</a></li>
+        </ul>
+    </nav>
     <main class="transparent-overlay">
-        <p>Your dream of exploring Mars starts here! At Mars Voyager Tours, we offer unparalleled experiences in space travel. Be part of the next generation of explorers and pilots.</p>
+        <h1>Welcome to Mars Voyager Tours</h1>
+        <p class="home-content-p">Your dream of exploring Mars starts here! At Mars Voyager Tours, we offer unparalleled experiences in space travel. Be part of the next generation of explorers and pilots.</p>
         <a href="./pilot_application.php" class="button">Apply to be a Pilot</a>
     </main>
     <footer class="transparent-overlay">
