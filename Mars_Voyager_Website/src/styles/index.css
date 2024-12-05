@@ -3,26 +3,26 @@
 */
 
 body {
-    display: flex; /* Make the body a flex container */
-    flex-direction: column; /* Align children vertically */
-    min-height: 100vh; /* Full height of the viewport */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-    font-family: Arial, sans-serif; /* Use Arial font */
-    line-height: 1.6; /* Increase line height for better readability */
-    background-image: url("/src/assets/MarsVoyager.jpg"); /* Set background image */
-    background-size: cover; /* Cover the entire viewport */
-    background-position: center; /* Center the background image */
-    background-repeat: no-repeat; /* Do not repeat the background image */
+  display: flex; /* Make the body a flex container */
+  flex-direction: column; /* Align children vertically */
+  min-height: 100vh; /* Full height of the viewport */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  font-family: Arial, sans-serif; /* Use Arial font */
+  line-height: 1.6; /* Increase line height for better readability */
+  background-image: url("/src/assets/MarsVoyager.jpg"); /* Set background image */
+  background-size: cover; /* Cover the entire viewport */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Do not repeat the background image */
 }
 
 .transparent-overlay {
-    background: rgba(0, 0, 0, 0.5); /* Black background with 50% transparency */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 50% transparency */
 }
 
 ul {
-    color: white; /* Set text color */
-    list-style-type: none; /* Remove default list style */  
+  color: white; /* Set text color */
+  list-style-type: none; /* Remove default list style */
 }
 
 /**
@@ -30,31 +30,31 @@ ul {
 */
 
 .nav-bar ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden; /* Hide overflow */
-    background-color: #222; /* Set background color */
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Hide overflow */
+  background-color: #222; /* Set background color */
 }
 
 .nav-bar li {
-    float: left; /* Float list items to the left */
+  float: left; /* Float list items to the left */
 }
 
 .nav-bar li a {
-    display: block; /* Display block */
-    color: white;
-    text-align: center; /* Center text */
-    padding: 14px 16px;
-    text-decoration: none; /* Remove underline */
+  display: block; /* Display block */
+  color: white;
+  text-align: center; /* Center text */
+  padding: 14px 16px;
+  text-decoration: none; /* Remove underline */
 }
 
 .nav-bar li a:hover:not(.active) {
-    background-color: #111;
+  background-color: #111;
 }
 
 .active {
-    background-color: #ff6f61;
+  background-color: #ff6f61;
 }
 
 /**
@@ -62,22 +62,23 @@ ul {
 */
 
 main {
-    flex: 1; /* Take up remaining space */
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center children horizontally */
-    justify-content: center; /* Center children vertically */
-    text-align: center;
+  flex: 1; /* Take up remaining space */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center children horizontally */
+  justify-content: center; /* Center children vertically */
+  text-align: center;
 }
 
-h1, p {
-    color: white;
-    margin: 0 0; /* Remove default margin */
+h1,
+p {
+  color: white;
+  margin: 0 0; /* Remove default margin */
 }
 
 .home-content-p {
-    margin: 0 0 20px 0; /* Remove default margin and add bottom margin */
+  margin: 0 0 20px 0; /* Remove default margin and add bottom margin */
 }
 
 /**
@@ -85,19 +86,19 @@ h1, p {
 */
 
 .button {
-    background: #ff6f61;
-    color: white;
-    border: none; /* Remove border */
-    padding: 10px 15px;
-    cursor: pointer; /* Change cursor to pointer on hover */
-    border-radius: 50px; /* Make the button rounded */
-    font-size: 16px; /* Increase font size */
-    transition: background 0.3s ease; /* Smooth transition for the hover effect */
-    text-decoration: none;
+  background: #ff6f61;
+  color: white;
+  border: none; /* Remove border */
+  padding: 10px 15px;
+  cursor: pointer; /* Change cursor to pointer on hover */
+  border-radius: 50px; /* Make the button rounded */
+  font-size: 16px; /* Increase font size */
+  transition: background 0.3s ease; /* Smooth transition for the hover effect */
+  text-decoration: none;
 }
 
 .button:hover {
-    background: #ff3b2d; /* Change background color on hover */
+  background: #ff3b2d; /* Change background color on hover */
 }
 
 /**
@@ -105,18 +106,21 @@ h1, p {
 */
 
 label {
-    color: white;
+  color: white;
 }
 
+form#loginForm,
 form#pilotForm {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
+form#loginForm label,
+form#loginForm input,
 form#pilotForm label,
 form#pilotForm input,
 form#pilotForm textarea {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 /**
@@ -124,5 +128,5 @@ form#pilotForm textarea {
 */
 
 footer {
-    text-align: center;
+  text-align: center;
 }

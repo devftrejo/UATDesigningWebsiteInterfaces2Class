@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +8,13 @@
     <link rel="stylesheet" href="./styles/index.css">
     <script src="./js/validation.js" defer></script>
 </head>
+
 <body>
     <nav class="nav-bar">
         <ul>
             <li><a href="index.php">Home</a></li>
             <li><a href="next_voyage.php">Next Voyage</a></li>
+            <li><a href="login.php">Login</a></li>
         </ul>
     </nav>
     <main class="transparent-overlay">
@@ -36,8 +39,7 @@
             <input type="submit" class="button">
         </form>
     </main>
-    <footer class="transparent-overlay">
-        <p id="footer-text">&copy; 2024 Mars Voyager Tours. All rights reserved.</p>
-    </footer>
+    <?php include 'footer.php'; ?>
 </body>
+
 </html>

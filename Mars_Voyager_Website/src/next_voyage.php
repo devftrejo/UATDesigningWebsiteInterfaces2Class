@@ -5,6 +5,7 @@ $nextTrip = strtotime('2025-01-01 12:00:00');
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,49 +14,51 @@ $nextTrip = strtotime('2025-01-01 12:00:00');
     <script>
         // JavaScript Countdown Timer:
         function startCountdown() { // Function to start the countdown
-            const nextTripTime = <?php echo $nextTrip * 1000; ?>; // PHP timestamp to JS (milliseconds)
-            const countdownElement = document.getElementById("countdown"); // Get the countdown element
-            const messageElement = document.getElementById("message"); // Get the message element
+            const NEXT_TRIP_TIME = <?php echo $nextTrip * 1000; ?>; // PHP timestamp to JS (milliseconds)
+            const COUNTDOWN_ELEMENT = document.getElementById("countdown"); // Get the countdown element
+            const MESSAGE_ELEMENT = document.getElementById("message"); // Get the message element
 
             function updateCountdown() { // Function to update the countdown
-                const now = new Date().getTime(); // Get the current time
-                const timeLeft = nextTripTime - now; // Calculate the time left
+                const NOW = new Date().getTime(); // Get the current time
+                const TIME_LEFT = NEXT_TRIP_TIME - NOW; // Calculate the time left
 
-                if (timeLeft <= 0) { // If the trip has departed
-                    countdownElement.innerText = "The trip has departed!"; // Display a message
-                    messageElement.innerText = "Check back for the next adventure!";
-                    clearInterval(interval); // Stop the timer
+                if (TIME_LEFT <= 0) { // If the trip has departed
+                    COUNTDOWN_ELEMENT.innerText = "The trip has departed!"; // Display a message
+                    MESSAGE_ELEMENT.innerText = "Check back for the next adventure!";
+                    clearInterval(INTERVAL); // Stop the timer
                     return; // Exit the function
                 }
 
-                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24)); // Calculate days
-                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)); // Calculate hours
-                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60)); // Calculate minutes
-                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000); // Calculate seconds
+                const DAYS = Math.floor(TIME_LEFT / (1000 * 60 * 60 * 24)); // Calculate days
+                const HOURS = Math.floor((TIME_LEFT % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)); // Calculate hours
+                const MINUTES = Math.floor((TIME_LEFT % (1000 * 60 * 60)) / (1000 * 60)); // Calculate minutes
+                const SECONDS = Math.floor((TIME_LEFT % (1000 * 60)) / 1000); // Calculate seconds
 
-                countdownElement.innerText = `${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`; // Display the countdown
-                
+                COUNTDOWN_ELEMENT.innerText = `${DAYS} days, ${HOURS} hours, ${MINUTES} minutes, ${SECONDS} seconds`; // Display the countdown
+
                 // Update the message dynamically:
-                if (timeLeft <= 7 * 24 * 60 * 60 * 1000) { // If the trip is within a week
-                    messageElement.innerText = "Pack your bags! Departure is within a week.";
-                } else if (timeLeft <= 30 * 24 * 60 * 60 * 1000) { // If the trip is within a month
-                    messageElement.innerText = "Get ready! The trip is less than a month away.";
+                if (TIME_LEFT <= 7 * 24 * 60 * 60 * 1000) { // If the trip is within a week
+                    MESSAGE_ELEMENT.innerText = "Pack your bags! Departure is within a week.";
+                } else if (TIME_LEFT <= 30 * 24 * 60 * 60 * 1000) { // If the trip is within a month
+                    MESSAGE_ELEMENT.innerText = "Get ready! The trip is less than a month away.";
                 } else { // If the trip is more than a month away
-                    messageElement.innerText = "The trip is scheduled. Start planning your adventure!";
+                    MESSAGE_ELEMENT.innerText = "The trip is scheduled. Start planning your adventure!";
                 }
             }
 
             // Update countdown every second:
-            const interval = setInterval(updateCountdown, 1000); // Update every second
+            const INTERVAL = setInterval(updateCountdown, 1000); // Update every second
             updateCountdown(); // Run once immediately
         }
     </script>
 </head>
+
 <body onload="startCountdown()"> <!-- Load the countdown when the page loads -->
     <nav class="nav-bar">
         <ul>
             <li><a href="index.php">Home</a></li>
             <li><a class="active" href="next_voyage.php">Next Voyage</a></li>
+            <li><a href="login.php">Login</a></li>
         </ul>
     </nav>
 
@@ -65,8 +68,7 @@ $nextTrip = strtotime('2025-01-01 12:00:00');
         <p id="message">Loading message...</p> <!-- Message based on the countdown -->
     </main>
 
-    <footer class="transparent-overlay">
-        <p id="footer-text">&copy; 2024 Mars Voyager Tours. All rights reserved.</p>
-    </footer>
+    <?php include 'footer.php'; ?>
 </body>
+
 </html>
