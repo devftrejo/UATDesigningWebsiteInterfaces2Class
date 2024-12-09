@@ -20,9 +20,20 @@ body {
   background: rgba(0, 0, 0, 0.5); /* Black background with 50% transparency */
 }
 
-ul {
+ul,
+#employee-options li a {
   color: white; /* Set text color */
   list-style-type: none; /* Remove default list style */
+  text-decoration: none; /* Remove underline */
+}
+
+#employee-options {
+  margin: 0;
+  padding: 0;
+}
+
+#employee-options :hover {
+  background-color: #ff6f61;
 }
 
 /**
@@ -46,7 +57,7 @@ ul {
   color: white;
   text-align: center; /* Center text */
   padding: 14px 16px;
-  text-decoration: none; /* Remove underline */
+  text-decoration: none;
 }
 
 .nav-bar li a:hover:not(.active) {
@@ -55,6 +66,24 @@ ul {
 
 .active {
   background-color: #ff6f61;
+}
+
+/**
+* Header:
+*/
+
+#employee-data {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #222;
+}
+
+#employee-data h1,
+#employee-data p {
+  display: block;
+  color: white;
+  text-align: center;
 }
 
 /**
@@ -72,6 +101,7 @@ main {
 }
 
 h1,
+h2,
 p {
   color: white;
   margin: 0 0; /* Remove default margin */
