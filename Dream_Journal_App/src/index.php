@@ -1,29 +1,38 @@
 <?php
+// Include database connection file:
 include './db/db_connection.php';
 
-// Handle form submission to save a dream
+// Handle form submission to save a dream:
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['title']) && isset($_POST['description'])) {
     $title = $_POST['title'];
     $description = $_POST['description'];
-    $date = date('Y-m-d');  // Set current date
+    $date = date('Y-m-d');  // Set current date.
 
     try {
-        // Insert dream into database
+        // Insert dream into database:
         $sql = "INSERT INTO dreams (title, description, date) VALUES (:title, :description, :date)";
+        // Prepare the SQL statement:
         $stmt = $pdo->prepare($sql);
+        // Bind parameters:
         $stmt->execute(['title' => $title, 'description' => $description, 'date' => $date]);
+        // Output success message:
         echo "Dream saved successfully!";
-    } catch (PDOException $e) {
+    } catch (PDOException $e) { // Catch any errors.
+        // Output error message:
         echo "Error: " . $e->getMessage();
     }
 }
 
-// Fetch all dreams from the database
+// Fetch all dreams from the database:
 try {
+    // Select all dreams from the database:
     $sql = "SELECT * FROM dreams";
+    // Execute the SQL statement:
     $stmt = $pdo->query($sql);
+    // Fetch all dreams as an associative array:
     $dreams = $stmt->fetchAll(PDO::FETCH_ASSOC);
-} catch (PDOException $e) {
+} catch (PDOException $e) { // Catch any errors.
+    // Output error message:
     echo "Error: " . $e->getMessage();
 }
 ?>
@@ -77,9 +86,11 @@ try {
     </section>
 
     <script>
+        // jQuery ready function waits for the document to be fully loaded before running the code:
         $(document).ready(function () {
+            //jQuery on function will listen for the submit event on the form:
             $('#dreamForm').on('submit', function () {
-                // Clear the form fields after submission
+                // Clear the form fields after submission:
                 $(this).find('input[type="text"], textarea').val('');
             });
         });
