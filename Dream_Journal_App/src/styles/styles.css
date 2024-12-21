@@ -1,15 +1,70 @@
 /* General Styles */
 
 body {
-  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+}
+
+body,
+html {
   margin: 0;
   padding: 0;
-  background-color: #f4f4f9;
+  font-family: Arial, sans-serif;
 }
 
 h1,
 h2 {
   margin: 10px 0;
+}
+
+/* Navbar Styles */
+.navbar {
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  z-index: 1000; /* Ensures the navbar is above the other elements */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #00bfff;
+  padding: 10px 20px;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar .logo a {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar .nav-links ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar .nav-links ul li {
+  margin-left: 20px;
+}
+
+.navbar .nav-links ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1em;
+  transition: color 0.3s;
+}
+
+.navbar .nav-links ul li a:hover {
+  color: black;
+}
+
+/* Content Styles (to adjust spacing below navbar) */
+.content {
+  padding: 20px;
+  margin-top: 20px;
+  text-align: center;
 }
 
 /* Header Styles */
@@ -40,7 +95,8 @@ form textarea {
   border: 1px solid #ddd;
 }
 
-form button {
+#form-button,
+#download-json {
   padding: 10px 20px;
   background-color: #00bfff;
   color: white;
@@ -48,8 +104,9 @@ form button {
   cursor: pointer;
 }
 
-form button:hover {
-  background-color: #00bfff;
+#form-button:hover,
+#download-json:hover {
+  background-color: dodgerblue;
 }
 
 /* List Styles */
@@ -70,4 +127,107 @@ ul li a {
 
 ul li a:hover {
   text-decoration: underline;
+}
+
+/* Scroll to Top Button */
+
+#scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: #00bfff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 24px;
+  text-align: center;
+  line-height: 50px;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+#scroll-to-top:hover {
+  background-color: dodgerblue;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* About Styles */
+
+/* Container for the About Page */
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: url("/src/assets/Book_Of_The_Future.jpg") no-repeat center
+    center/cover;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+/* Content Styling */
+
+.about-content {
+  max-width: 600px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.6); /* Transparent black background */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.about-content h1 {
+  margin-bottom: 15px;
+  font-size: 2em;
+  text-align: center;
+  color: dodgerblue;
+}
+
+.about-content p {
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.about-content ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.about-content ul li {
+  margin-bottom: 5px;
+}
+
+/* Footer Styles */
+
+.footer {
+  background-color: #00bfff;
+  color: white;
+  text-align: center;
+  padding: 15px 20px;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+  font-size: 0.9em;
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.footer-content p {
+  margin: 0;
+  padding-bottom: 5px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: white;
+  margin: 0 5px;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: black;
 }

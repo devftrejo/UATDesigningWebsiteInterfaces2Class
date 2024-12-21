@@ -52,10 +52,19 @@ try {
 </head>
 
 <body>
-    <header>
-        <h1>Dream Journal</h1>
-    </header>
+    <!-- Navbar -->
+
+    <?php include "./navbar.php"; ?>
+
+    <!-- Main Content -->
+
+    <div class="content">
+        <h1>Welcome to the Dream Journal</h1>
+        <p>Record and explore your dreams.</p>
+    </div>
+
     <!-- Add a new dream form -->
+
     <section>
         <h2>Add a New Dream</h2>
         <form action="" method="POST">
@@ -65,12 +74,13 @@ try {
             <label for="description">Dream Description:</label>
             <textarea id="description" name="description" required></textarea>
 
-            <button type="submit">Save Dream</button>
+            <button id="form-button" type="submit">Save Dream</button>
         </form>
     </section>
 
     <section>
         <!-- List all dreams -->
+
         <h2>My Dreams</h2>
         <ul>
             <!-- Loop through all dreams and display them -->
@@ -81,20 +91,31 @@ try {
                     <strong>Date: </strong><?php echo htmlspecialchars($dream['date']); ?><br>
                     <strong>Description: </strong><?php echo htmlspecialchars(substr($dream['description'], 0, 1000)); ?>
                 </li>
+                <hr> <!-- Divider for each dream -->
             <?php endforeach; ?>
         </ul>
     </section>
 
-    <script>
-        // jQuery ready function waits for the document to be fully loaded before running the code:
-        $(document).ready(function () {
-            //jQuery on function will listen for the submit event on the form:
-            $('#dreamForm').on('submit', function () {
-                // Clear the form fields after submission:
-                $(this).find('input[type="text"], textarea').val('');
-            });
-        });
-    </script>
+    <section>
+        <!-- Download Dreams -->
+
+        <div class="download-section">
+            <h2>Download Dreams</h2>
+            <button id="download-json">Download JSON</button>
+        </div>
+    </section>
+
+    <!-- Scroll to Top Button -->
+
+    <button id="scroll-to-top" title="Scroll to Top">↑</button>
+
+    <!-- Footer -->
+
+    <?php include "./footer.php"; ?>
+
+    <!-- Main JS -->
+
+    <script src="./js/scripts.js"></script>
 </body>
 
 </html>
