@@ -7,6 +7,9 @@
     <title>About - Dream Journal</title>
     <!-- Link stylesheet -->
     <link rel="stylesheet" href="./styles/styles.css">
+    <!-- Link jQuery via CDN-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -35,7 +38,7 @@
 
     <!-- Scroll to Top Button -->
 
-    <button id="scroll-to-top" title="Scroll to Top">↑</button>
+    <?php include "./scroll_to_top.php"; ?>
 
     <!-- Footer -->
 

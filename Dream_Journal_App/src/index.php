@@ -107,7 +107,7 @@ try {
 
     <!-- Scroll to Top Button -->
 
-    <button id="scroll-to-top" title="Scroll to Top">↑</button>
+    <?php include "./scroll_to_top.php"; ?>
 
     <!-- Footer -->
 
